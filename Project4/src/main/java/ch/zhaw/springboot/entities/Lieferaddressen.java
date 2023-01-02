@@ -11,11 +11,11 @@ public class Lieferaddressen {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
-    private String strasse;
+    private String addresse;
     private String ort;
        
     public Lieferaddressen (String strasse, String ort) {
-        this.strasse = strasse;
+        this.addresse = strasse;
         this.ort = ort;
     }
 
@@ -24,7 +24,7 @@ public class Lieferaddressen {
     }
     
     public String getStrasse() {
-        return strasse;
+        return addresse;
     }
 
     public String getOrt() {

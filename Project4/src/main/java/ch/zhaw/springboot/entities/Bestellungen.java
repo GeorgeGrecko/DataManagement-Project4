@@ -39,7 +39,7 @@ public class Bestellungen {
         return this.zahlungsarten;
     }
 
-    public Lieferaddressen getIdLieferadresse() {
+    public Lieferaddressen getLieferaddresse() {
         return this.lieferaddressen;
     }
 }
