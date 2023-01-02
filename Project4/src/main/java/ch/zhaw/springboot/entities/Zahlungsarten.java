@@ -4,23 +4,21 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Zahlungsmethode {
+public class Zahlungsarten {
     
     @Id
     private long id;
-
     private String art;
 
-    public Zahlungsmethode(String art) {
+    public Zahlungsarten(String art) {
         this.art = art;
     }
 
-    public Zahlungsmethode() {
+    public Zahlungsarten() {
 
     }
 
     public String getArt() {
        return art;
     }
-
 }
