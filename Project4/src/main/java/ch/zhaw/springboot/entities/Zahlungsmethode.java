@@ -1,9 +1,5 @@
 package ch.zhaw.springboot.entities;
 
-<<<<<<< HEAD
-public class Zahlungsmethode {
-    
-=======
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
@@ -27,5 +23,4 @@ public class Zahlungsmethode {
        return art;
     }
 
->>>>>>> fe565ccd4ad647daf578c6926d206b3078751f59
 }
