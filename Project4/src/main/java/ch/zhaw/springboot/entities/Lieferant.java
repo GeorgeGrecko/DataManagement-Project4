@@ -1,7 +1,5 @@
 package ch.zhaw.springboot.entities;
 
-import org.hibernate.boot.registry.selector.spi.StrategySelectionException;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
