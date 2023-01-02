@@ -25,14 +25,14 @@ public class Bestellungen {
     }
 
     public Kunden getKunden() {
-        return this.kunde;
+        return kunde;
     }
 
     public long getIdZahlungsart() {
-        return this.idZahlungsart;
+        return idZahlungsart;
     }
 
     public long getIdLieferadresse() {
-        return this.idLieferadresse;
+        return idLieferadresse;
     }
 }
