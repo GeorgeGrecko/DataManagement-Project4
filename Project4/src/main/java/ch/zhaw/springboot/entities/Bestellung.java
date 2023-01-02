@@ -8,12 +8,12 @@ public class Bestellung {
     @Id
     private long id;
     private long kundenId;
-    private long produkteId;
+    private long produktId;
     private long zahlungsmethodenId;
 
-    public Bestellung (long kundenId, long produkteId, long zahlungsmethodenId) {
+    public Bestellung (long kundenId, long produktId, long zahlungsmethodenId) {
         this.kundenId = kundenId;
-        this.produkteId = produkteId;
+        this.produktId = produktId;
         this.zahlungsmethodenId = zahlungsmethodenId;
     }
 
@@ -26,7 +26,7 @@ public class Bestellung {
     }
 
     public long getProdukteId() {
-        return this.produkteId;
+        return this.produktId;
     }
 
     public long getZahlungsmethodenId() {
