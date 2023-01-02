@@ -27,6 +27,6 @@ public class Lieferanten {
     }
 
     public Produkte getProdukt() {
-        return produkt;
+        return this.produkt;
     }
 }

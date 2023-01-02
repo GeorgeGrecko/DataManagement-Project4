@@ -36,10 +36,10 @@ public class Produkte {
     }
 
     public Lieferanten getLieferant() {
-        return lieferant;
+        return this.lieferant;
     }
 
     public Bestellungen getBestellung() {
-        return bestellung;
+        return this.bestellung;
     }
 }

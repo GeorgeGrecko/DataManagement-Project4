@@ -25,7 +25,7 @@ public class Bestellungen {
     }
 
     public Kunden getKunden() {
-        return kunde;
+        return this.kunde;
     }
 
     public long getIdZahlungsart() {
