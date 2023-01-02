@@ -2,6 +2,7 @@ package ch.zhaw.springboot.entities;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Produkte {
@@ -9,14 +10,16 @@ public class Produkte {
     private long id;
     private String name;
     private long preis;
-    private long idLieferant;
-    private long idBestellung;
 
-    public Produkte(String name, long preis, long idLieferant, long idBestellung) {
+    @ManyToOne
+    private Bestellungen bestellung;
+    private Lieferanten lieferant;
+
+    public Produkte(String name, long preis, Lieferanten lieferant, Bestellungen bestellung) {
         this.name = name;
         this.preis = preis;
-        this.idLieferant = idLieferant;
-        this.idBestellung = idBestellung;
+        this.lieferant = lieferant;
+        this.bestellung = bestellung;
     }
 
     public Produkte() {
@@ -31,11 +34,11 @@ public class Produkte {
         return this.preis;
     }
 
-    public long getIdLieferant() {
-        return this.idLieferant;
+    public Lieferanten getLieferant() {
+        return this.lieferant;
     }
 
-    public long getIdBestellung() {
-        return this.idBestellung;
+    public Bestellungen getBestellung() {
+        return this.bestellung;
     }
 }
