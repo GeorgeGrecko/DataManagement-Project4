@@ -27,18 +27,18 @@ public class Produkte {
     }
 
     public String getname() {
-        return this.name;
+        return name;
     }
 
     public long getPreis() {
-        return this.preis;
+        return preis;
     }
 
     public Lieferanten getLieferant() {
-        return this.lieferant;
+        return lieferant;
     }
 
     public Bestellungen getBestellung() {
-        return this.bestellung;
+        return bestellung;
     }
 }
