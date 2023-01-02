@@ -4,6 +4,7 @@ import org.hibernate.boot.registry.selector.spi.StrategySelectionException;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity // 1: Annotate with @Entity
 public class Lieferant { // 0: Regula Java class with attributes, constructor, methods
@@ -12,11 +13,14 @@ public class Lieferant { // 0: Regula Java class with attributes, constructor, m
 
     private String firma;
    
+    @ManyToOne
+    private Produkt produkt;
 
     //Not relevant how the id attribute is specified
     
-    public Lieferant (String firma) {
+    public Lieferant (String firma, Produkt produkt) {
         this.firma = firma;
+        this.produkt = produkt;
     }
 
     public Lieferant() { // 3. Provide default constroctor if non-default is present
@@ -25,6 +29,10 @@ public class Lieferant { // 0: Regula Java class with attributes, constructor, m
     
     public String getFirma() {
         return firma;
+    }
+
+    public Produkt getProdukt() {
+        return this.produkt;
     }
 
     
