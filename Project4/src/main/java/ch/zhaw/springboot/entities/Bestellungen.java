@@ -8,16 +8,16 @@ import jakarta.persistence.ManyToOne;
 public class Bestellungen {
     @Id
     private long id;
-    private long idZahlungsart;
-    private long idLieferadresse;
 
     @ManyToOne
     private Kunden kunde;
+    private Lieferaddressen lieferaddresse;
+    private Zahlungsarten zahlungsart;
 
-    public Bestellungen (Kunden kunde, long idZahlungsart, long idLieferadresse) {
+    public Bestellungen (Kunden kunde, Lieferaddressen lieferaddresse, Zahlungsarten zahlungsart) {
         this.kunde = kunde;
-        this.idZahlungsart = idZahlungsart;
-        this.idLieferadresse = idLieferadresse;
+        this.lieferaddresse = lieferaddresse;
+        this.zahlungsart = zahlungsart;
     }
 
     public Bestellungen() {
@@ -28,11 +28,11 @@ public class Bestellungen {
         return this.kunde;
     }
 
-    public long getIdZahlungsart() {
-        return idZahlungsart;
+    public Zahlungsarten getZahlungsart() {
+        return this.zahlungsart;
     }
 
-    public long getIdLieferadresse() {
-        return idLieferadresse;
+    public Lieferaddressen getIdLieferadresse() {
+        return this.lieferaddresse;
     }
 }

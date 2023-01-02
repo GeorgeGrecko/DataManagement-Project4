@@ -4,18 +4,18 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity 
-public class Lieferadressen { 
+public class Lieferaddressen { 
     @Id 
     private long id;
     private String strasse;
     private String ort;
        
-    public Lieferadressen (String strasse, String ort) {
+    public Lieferaddressen (String strasse, String ort) {
         this.strasse = strasse;
         this.ort = ort;
     }
 
-    public Lieferadressen() { 
+    public Lieferaddressen() { 
 
     }
     
