@@ -8,6 +8,7 @@ import jakarta.persistence.ManyToOne;
 public class Produkte {
     @Id
     private long id;
+
     private String name;
     private long preis;
 
