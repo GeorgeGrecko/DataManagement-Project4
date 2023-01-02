@@ -1,8 +1,5 @@
 package ch.zhaw.springboot.entities;
 
-<<<<<<< HEAD
-public class Lieferant {
-=======
 import org.hibernate.boot.registry.selector.spi.StrategySelectionException;
 
 import jakarta.persistence.Entity;
@@ -37,7 +34,5 @@ public class Lieferant { // 0: Regula Java class with attributes, constructor, m
     public Produkt getProdukt() {
         return this.produkt;
     }
-
->>>>>>> fe565ccd4ad647daf578c6926d206b3078751f59
     
 }
