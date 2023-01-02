@@ -13,14 +13,14 @@ public class Produkte {
     private long preis;
 
     @ManyToOne
-    private Bestellungen bestellung;
-    private Lieferanten lieferant;
+    private Bestellungen bestellungen;
+    private Lieferanten lieferanten;
 
-    public Produkte(String name, long preis, Lieferanten lieferant, Bestellungen bestellung) {
+    public Produkte(String name, long preis, Lieferanten lieferanten, Bestellungen bestellungen) {
         this.name = name;
         this.preis = preis;
-        this.lieferant = lieferant;
-        this.bestellung = bestellung;
+        this.lieferanten = lieferanten;
+        this.bestellungen = bestellungen;
     }
 
     public Produkte() {
@@ -36,10 +36,10 @@ public class Produkte {
     }
 
     public Lieferanten getLieferant() {
-        return this.lieferant;
+        return this.lieferanten;
     }
 
     public Bestellungen getBestellung() {
-        return this.bestellung;
+        return this.bestellungen;
     }
 }

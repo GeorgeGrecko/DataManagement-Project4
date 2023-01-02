@@ -10,14 +10,14 @@ public class Bestellungen {
     private long id;
 
     @ManyToOne
-    private Kunden kunde;
-    private Lieferaddressen lieferaddresse;
-    private Zahlungsarten zahlungsart;
+    private Kunden kunden;
+    private Lieferaddressen lieferaddressen;
+    private Zahlungsarten zahlungsarten;
 
-    public Bestellungen (Kunden kunde, Lieferaddressen lieferaddresse, Zahlungsarten zahlungsart) {
-        this.kunde = kunde;
-        this.lieferaddresse = lieferaddresse;
-        this.zahlungsart = zahlungsart;
+    public Bestellungen (Kunden kunden, Lieferaddressen lieferaddressen, Zahlungsarten zahlungsarten) {
+        this.kunden = kunden;
+        this.lieferaddressen = lieferaddressen;
+        this.zahlungsarten = zahlungsarten;
     }
 
     public Bestellungen() {
@@ -25,14 +25,14 @@ public class Bestellungen {
     }
 
     public Kunden getKunden() {
-        return this.kunde;
+        return this.kunden;
     }
 
     public Zahlungsarten getZahlungsart() {
-        return this.zahlungsart;
+        return this.zahlungsarten;
     }
 
     public Lieferaddressen getIdLieferadresse() {
-        return this.lieferaddresse;
+        return this.lieferaddressen;
     }
 }
