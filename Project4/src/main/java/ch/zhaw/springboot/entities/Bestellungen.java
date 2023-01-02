@@ -32,5 +32,4 @@ public class Bestellungen {
     public long getIdLieferadresse() {
         return this.idLieferadresse;
     }
-    
 }
