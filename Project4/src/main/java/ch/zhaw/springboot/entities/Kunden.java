@@ -20,7 +20,7 @@ public class Kunden {
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 
     public String getTelefon() {
