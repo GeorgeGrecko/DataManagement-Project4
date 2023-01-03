@@ -12,17 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
 import ch.zhaw.springboot.entities.Bestellungen;
 import ch.zhaw.springboot.repositories.BestellungenRepository;
 
-@RestController // 1: annotation
+@RestController
 public class BestellungenRestController {
 
     @Autowired
-    private BestellungenRepository repository; // 2: acces to repository
-
-    // 3. One endpoint: 3.1, 3.2, 3.3
-    @RequestMapping(value="datamanagement4/Bestellungen", method=RequestMethod.GET) // 3.1 endpoint declaration incl. url & method
-    public ResponseEntity<List<Bestellungen>> getBestellungens() { // 3.2: Java method to be executed
-        // 3.3 implement behavior
+    private BestellungenRepository repository;
+    
+    @RequestMapping(value = "datamanagement4/Bestellungen", method = RequestMethod.GET)
+    public ResponseEntity<List<Bestellungen>> getBestellungens() {
         List<Bestellungen> result = this.repository.findAll();
         return new ResponseEntity<List<Bestellungen>>(result, HttpStatus.OK);
     }
+
 }

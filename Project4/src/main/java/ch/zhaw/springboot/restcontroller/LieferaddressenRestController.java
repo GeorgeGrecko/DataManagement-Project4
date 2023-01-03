@@ -12,16 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import ch.zhaw.springboot.entities.Lieferaddressen;
 import ch.zhaw.springboot.repositories.LieferaddressenRepository;
 
-@RestController // 1: annotation
+@RestController
 public class LieferaddressenRestController {
 
     @Autowired
-    private LieferaddressenRepository repository; // 2: acces to repository
+    private LieferaddressenRepository repository;
 
-    // 3. One endpoint: 3.1, 3.2, 3.3
-    @RequestMapping(value="datamanagement4/Lieferadressen", method=RequestMethod.GET) // 3.1 endpoint declaration incl. url & method
-    public ResponseEntity<List<Lieferaddressen>> getLieferaddressens() { // 3.2: Java method to be executed
-        // 3.3 implement behavior
+    @RequestMapping(value="datamanagement4/Lieferadressen", method=RequestMethod.GET)
+    public ResponseEntity<List<Lieferaddressen>> getLieferaddressens() {
         List<Lieferaddressen> result = this.repository.findAll();
         return new ResponseEntity<List<Lieferaddressen>>(result, HttpStatus.OK);
     }
