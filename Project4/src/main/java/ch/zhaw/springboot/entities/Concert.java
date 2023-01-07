@@ -6,20 +6,20 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Kunden {
+public class Concert {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     
     private String name;
-    private String telefon;
+    private String location;
 
-    public Kunden (String name, String telefon) {
+    public Concert (String name, String location) {
         this.name = name;
-        this.telefon = telefon;
+        this.location = location;
     }
 
-    public Kunden() {
+    public Concert() {
 
     }
 
@@ -27,7 +27,7 @@ public class Kunden {
         return name;
     }
 
-    public String getTelefon() {
-        return telefon;
+    public String getLocation() {
+        return location;
     }
 }
